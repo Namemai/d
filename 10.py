@@ -46,6 +46,8 @@ g1.log("Auth Token : " + str(g1.authToken))
 
 g2 = LINE("lln71685@bcaoo.com","mai06555mai")
 g2.log("Auth Token : " + str(g2.authToken))
+
+print("---LOGIN SUCCES---")
 #==============================================================================#
 lineMID = line.profile.mid
 lineProfile = line.getProfile()
@@ -3581,103 +3583,103 @@ def lineBot(op):
                     else:
                         line.sendText(msg.to,"sᴇᴍᴜᴀ ɢʀᴜᴘ sᴜᴅᴀʜ ᴅɪʙᴀᴛᴀʟᴋᴀɴ")
 
-                elif cmd == ".speed" or cmd == "spb":
-                    if msg._from in admin:
-                       start = time.time()
-                       elapsed_time = time.time() - start
-                       ki.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                       kk.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                       kc.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                       ke.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                       ks.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                       kt.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                       k1.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                       k2.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                       k3.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
+                elif text.lower() == 'spb':
+                  if msg._from in admin:
+                     start = time.time()
+                     elapsed_time = time.time() - start
+                     ki.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
+                     kk.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
+                     kc.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
+                     ke.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
+                     ks.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
+                     kt.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
+                     k1.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
+                     k2.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
+                     k3.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
 #======================================================================================================#
-                elif cmd == "ck":
-                    if msg._from in admin or msg._from in owner:
-                       try:ki.inviteIntoGroup(to, [kiMID]);has = "OK"
-                       except:has = "NOT"
-                       try:ki.kickoutFromGroup(to, [kiMID]);has1 = "OK"
-                       except:has1 = "NOT"
-                       if has == "OK":sil = "⭕"
-                       else:sil = "⛔"
-                       if has1 == "OK":sil1 = "⭕"
-                       else:sil1 = "⛔"
-                       ki.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))                               
-                       try:kk.inviteIntoGroup(to, [kkMID]);has = "OK"
-                       except:has = "NOT"
-                       try:kk.kickoutFromGroup(to, [kkMID]);has1 = "OK"
-                       except:has1 = "NOT"
-                       if has == "OK":sil = "⭕"
-                       else:sil = "⛔"
-                       if has1 == "OK":sil1 = "⭕"
-                       else:sil1 = "⛔"
-                       kk.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
-                       try:kc.inviteIntoGroup(to, [kcMID]);has = "OK"
-                       except:has = "NOT"
-                       try:kc.kickoutFromGroup(to, [kcMID]);has1 = "OK"
-                       except:has1 = "NOT"
-                       if has == "OK":sil = "⭕"
-                       else:sil = "⛔"
-                       if has1 == "OK":sil1 = "⭕"
-                       else:sil1 = "⛔"
-                       kc.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
-                       try:ke.inviteIntoGroup(to, [keMID]);has = "OK"
-                       except:has = "NOT"
-                       try:ke.kickoutFromGroup(to, [keMID]);has1 = "OK"
-                       except:has1 = "NOT"
-                       if has == "OK":sil = "⭕"
-                       else:sil = "⛔"
-                       if has1 == "OK":sil1 = "⭕"
-                       else:sil1 = "⛔"
-                       ke.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
-                       try:ks.inviteIntoGroup(to, [ksMID]);has = "OK"
-                       except:has = "NOT"
-                       try:ks.kickoutFromGroup(to, [ksMID]);has1 = "OK"
-                       except:has1 = "NOT"
-                       if has == "OK":sil = "⭕"
-                       else:sil = "⛔"
-                       if has1 == "OK":sil1 = "⭕"
-                       else:sil1 = "⛔"
-                       ks.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
-                       try:kt.inviteIntoGroup(to, [ktMID]);has = "OK"
-                       except:has = "NOT"
-                       try:kt.kickoutFromGroup(to, [ktMID]);has1 = "OK"
-                       except:has1 = "NOT"
-                       if has == "OK":sil = "⭕"
-                       else:sil = "⛔"
-                       if has1 == "OK":sil1 = "⭕"
-                       else:sil1 = "⛔"
-                       kt.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
-                       try:k1.inviteIntoGroup(to, [k1MID]);has = "OK"
-                       except:has = "NOT"
-                       try:k1.kickoutFromGroup(to, [k1MID]);has1 = "OK"
-                       except:has1 = "NOT"
-                       if has == "OK":sil = "⭕"
-                       else:sil = "⛔"
-                       if has1 == "OK":sil1 = "⭕"
-                       else:sil1 = "⛔"
-                       k1.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
-                       try:k2.inviteIntoGroup(to, [k2MID]);has = "OK"
-                       except:has = "NOT"
-                       try:k2.kickoutFromGroup(to, [k2MID]);has1 = "OK"
-                       except:has1 = "NOT"
-                       if has == "OK":sil = "⭕"
-                       else:sil = "⛔"
-                       if has1 == "OK":sil1 = "⭕"
-                       else:sil1 = "⛔"
-                       k2.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
-                       try:k3.inviteIntoGroup(to, [k3MID]);has = "OK"
-                       except:has = "NOT"
-                       try:k3.kickoutFromGroup(to, [k3MID]);has1 = "OK"
-                       except:has1 = "NOT"
-                       if has == "OK":sil = "⭕"
-                       else:sil = "⛔"
-                       if has1 == "OK":sil1 = "⭕"
-                       else:sil1 = "⛔"
-                       k3.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
+                elif text.lower() == 'ck':
+                  if msg._from in admin or msg._from in owner:
+                     try:ki.inviteIntoGroup(to, [kiMID]);has = "OK"
+                     except:has = "NOT"
+                     try:ki.kickoutFromGroup(to, [kiMID]);has1 = "OK"
+                     except:has1 = "NOT"
+                     if has == "OK":sil = "⭕"
+                     else:sil = "⛔"
+                     if has1 == "OK":sil1 = "⭕"
+                     else:sil1 = "⛔"
+                     ki.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))                               
+                     try:kk.inviteIntoGroup(to, [kkMID]);has = "OK"
+                     except:has = "NOT"
+                     try:kk.kickoutFromGroup(to, [kkMID]);has1 = "OK"
+                     except:has1 = "NOT"
+                     if has == "OK":sil = "⭕"
+                     else:sil = "⛔"
+                     if has1 == "OK":sil1 = "⭕"
+                     else:sil1 = "⛔"
+                     kk.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
+                     try:kc.inviteIntoGroup(to, [kcMID]);has = "OK"
+                     except:has = "NOT"
+                     try:kc.kickoutFromGroup(to, [kcMID]);has1 = "OK"
+                     except:has1 = "NOT"
+                     if has == "OK":sil = "⭕"
+                     else:sil = "⛔"
+                     if has1 == "OK":sil1 = "⭕"
+                     else:sil1 = "⛔"
+                     kc.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
+                     try:ke.inviteIntoGroup(to, [keMID]);has = "OK"
+                     except:has = "NOT"
+                     try:ke.kickoutFromGroup(to, [keMID]);has1 = "OK"
+                     except:has1 = "NOT"
+                     if has == "OK":sil = "⭕"
+                     else:sil = "⛔"
+                     if has1 == "OK":sil1 = "⭕"
+                     else:sil1 = "⛔"
+                     ke.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
+                     try:ks.inviteIntoGroup(to, [ksMID]);has = "OK"
+                     except:has = "NOT"
+                     try:ks.kickoutFromGroup(to, [ksMID]);has1 = "OK"
+                     except:has1 = "NOT"
+                     if has == "OK":sil = "⭕"
+                     else:sil = "⛔"
+                     if has1 == "OK":sil1 = "⭕"
+                     else:sil1 = "⛔"
+                     ks.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
+                     try:kt.inviteIntoGroup(to, [ktMID]);has = "OK"
+                     except:has = "NOT"
+                     try:kt.kickoutFromGroup(to, [ktMID]);has1 = "OK"
+                     except:has1 = "NOT"
+                     if has == "OK":sil = "⭕"
+                     else:sil = "⛔"
+                     if has1 == "OK":sil1 = "⭕"
+                     else:sil1 = "⛔"
+                     kt.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
+                     try:k1.inviteIntoGroup(to, [k1MID]);has = "OK"
+                     except:has = "NOT"
+                     try:k1.kickoutFromGroup(to, [k1MID]);has1 = "OK"
+                     except:has1 = "NOT"
+                     if has == "OK":sil = "⭕"
+                     else:sil = "⛔"
+                     if has1 == "OK":sil1 = "⭕"
+                     else:sil1 = "⛔"
+                     k1.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
+                     try:k2.inviteIntoGroup(to, [k2MID]);has = "OK"
+                     except:has = "NOT"
+                     try:k2.kickoutFromGroup(to, [k2MID]);has1 = "OK"
+                     except:has1 = "NOT"
+                     if has == "OK":sil = "⭕"
+                     else:sil = "⛔"
+                     if has1 == "OK":sil1 = "⭕"
+                     else:sil1 = "⛔"
+                     k2.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
+                     try:k3.inviteIntoGroup(to, [k3MID]);has = "OK"
+                     except:has = "NOT"
+                     try:k3.kickoutFromGroup(to, [k3MID]);has1 = "OK"
+                     except:has1 = "NOT"
+                     if has == "OK":sil = "⭕"
+                     else:sil = "⛔"
+                     if has1 == "OK":sil1 = "⭕"
+                     else:sil1 = "⛔"
+                     k3.sendMessage(to, "sᴛᴀᴛᴜs:\n\nᴋɪᴄᴋ : {} \nɪɴᴠɪᴛᴇ : {}".format(sil1,sil))
 #======================================================================================================#                  
         if op.type == 19:
             if lineMID in op.param3:
