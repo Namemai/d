@@ -1121,6 +1121,52 @@ def lineBot(op):
                                                                 random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                                                          except:
                                                                 pass
+        if op.type == 19:
+            if mid in op.param3:
+                if op.param2 in Bots:
+                    pass
+                if op.param2 in owner:
+                    pass
+                if op.param2 in admin:
+                    pass
+                if op.param2 in staff:
+                    pass
+                else:
+                    wait["blacklist"][op.param2] = True
+                    try:
+                        g1.acceptGroupInvitation(op.param1)
+                        g1.findAndAddContactsByMid(op.param3)
+                        g2.acceptGroupInvitation(op.param1)
+                        g2.findAndAddContactsByMid(op.param3)
+                        g1.inviteIntoGroup(op.param1,[op.param3])
+                        g2.inviteIntoGroup(op.param1,[op.param3])
+                        line.acceptGroupInvitation(op.param1)
+                        x = g1.getGroup(op.param1)
+                        x = g2.getGroup(op.param1)
+                        x.preventedJoinByTicket = False
+                        g1.updateGroup(x)
+                        g2.updateGroup(x)
+                        invsend = 0
+                        Ti = g1.reissueGroupTicket(op.param1)
+                        Ti = g2.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        kk.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        kc.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ke.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ks.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        kt.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        k1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        k2.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        k3.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        Ticket = g1.reissueGroupTicket(op.param1)
+                        Ticket = g2.reissueGroupTicket(op.param1)
+                        sw.leaveGroup(op.param1)
+                        ss.leaveGroup(op.param1)
+                        random.choice(KAC).inviteIntoGroup(op.param1,[g1MID,g2MID])
+                    except:
+                        random.choice(KAC).findAndAddContactsByMid(op.param3)
+                        random.choice(KAC).inviteIntoGroup(op.param1,[g1MID,g2MID])
                                       
                 return         
        
