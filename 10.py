@@ -11,40 +11,40 @@ import time, random, sys, json, codecs, threading, glob, re, string, os, request
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-line = LINE("")
+line = LINE("axd16254@zzrgg.com","mai06555mai")
 line.log("Auth Token : " + str(line.authToken))
 # Assist
-ki = LINE("")
+ki = LINE("mnn84815@bcaoo.com","mai06555mai")
 ki.log("Auth Token : " + str(ki.authToken))
 
-kk = LINE("")
+kk = LINE("uwc45303@zzdgg.com","mai06555mai")
 kk.log("Auth Token : " + str(kk.authToken))
 
-kc = LINE("")
+kc = LINE("ckz89175@bcaoo.com","mai06555mai")
 kc.log("Auth Token : " + str(kc.authToken))
 
-ke = LINE("")
+ke = LINE("pzx60129@bcaoo.com","mai06555mai")
 ke.log("Auth Token : " + str(ke.authToken))
 
-ks = LINE("")
+ks = LINE("faz26918@zzrgg.com","mai06555mai")
 ks.log("Auth Token : " + str(ks.authToken))
 
-kt = LINE("")
+kt = LINE("ovj15178@zzrgg.com","mai06555mai")
 kt.log("Auth Token : " + str(kt.authToken))
 
-k1 = LINE("")
+k1 = LINE("bvu03985@eoopy.com","mai06555mai")
 k1.log("Auth Token : " + str(k1.authToken)) 
 
-k2 = LINE("")
+k2 = LINE("vsz71687@eoopy.com","mai06555mai")
 k2.log("Auth Token : " + str(k2.authToken))
 
-k3 = LINE("")
+k3 = LINE("hgr99109@eoopy.com","mai06555mai")
 k3.log("Auth Token : " + str(k3.authToken))
 
-g1 = LINE("")
+g1 = LINE("mhh87894@zzrgg.com","mai06555mai")
 g1.log("Auth Token : " + str(g1.authToken))
 
-g2 = LINE("")
+g2 = LINE("lln71685@bcaoo.com","mai06555mai")
 g2.log("Auth Token : " + str(g2.authToken))
 #==============================================================================#
 lineMID = line.profile.mid
