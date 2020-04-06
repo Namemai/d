@@ -17,7 +17,7 @@ line.log("Auth Token : " + str(line.authToken))
 ki = LINE("mnn84815@bcaoo.com","mai06555mai")
 ki.log("Auth Token : " + str(ki.authToken))
 
-kk = LINE("uwc45303@zzdgg.com","mai06555mai")
+kk = LINE("uwc45303@zzrgg.com","mai06555mai")
 kk.log("Auth Token : " + str(kk.authToken))
 
 kc = LINE("ckz89175@bcaoo.com","mai06555mai")
