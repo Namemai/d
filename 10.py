@@ -327,7 +327,7 @@ def helpkicker():
                  "🦆 4 @" + "\n" + \
                  "🦆 3 @" + "\n" + \
                  "🦆 2 @" + "\n" + \
-                 "🦆 1 @" + "\n" + \
+                 "🦆 bk @" + "\n" + \
                  "🦆 siri @"+ "\n" + \
                  "🦆"
     return helpKicker
@@ -2948,7 +2948,7 @@ def lineBot(op):
                 elif text.lower() == 'มี':
                   if msg._from in admin:
                      msg.contentType = 13
-                     msg.contentMetadata = {'mid': mid}
+                     msg.contentMetadata = {'mid': MID}
                      line.sendMessage1(msg)
                 elif text.lower() == 'sp':
                   if msg._from in admin:
@@ -3041,7 +3041,7 @@ def lineBot(op):
                             ret_ += "\n{}".format(str(ls))
                         line.sendMessage(to, str(ret_))
 #==============================================================================#                      
-                elif msg.text in ["lg"]:
+                elif msg.text in ["LG"]:
                   if msg._from in admin:
                     gid = line.getGroupIdsJoined()
                     h = ""
@@ -3066,7 +3066,7 @@ def lineBot(op):
                 
                 elif "ดึง " in msg.text:
                   if msg._from in admin:
-                    gid = msg.text.replace("/invite: ","")
+                    gid = msg.text.replace("ดึง ","")
                     if gid == "":
                       line.sendText(msg.to,"Invalid group id")
                     else:
@@ -3477,9 +3477,9 @@ def lineBot(op):
                                  msgs = "anti kicker sudah tidak aktif"
                             line.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs) 
 
-                elif 'pro ' in msg.text:
+                elif 'p ' in msg.text:
                   if msg._from in admin:
-                      spl = msg.text.replace('pro ','')
+                      spl = msg.text.replace('p ','')
                       if spl == 'on':
                           if msg.to in protectqr:
                                msgs = ""
@@ -3585,17 +3585,42 @@ def lineBot(op):
 
                 elif text.lower() == 'spb':
                   if msg._from in admin:
-                     start = time.time()
-                     elapsed_time = time.time() - start
-                     ki.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                     kk.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                     kc.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                     ke.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                     ks.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                     kt.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                     k1.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                     k2.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
-                     k3.sendMessage(msg.to, "{} ms".format(str(elapsed_time/10)))
+                      get_profile_time_start = time.time()
+                      get_profile = cl.getProfile()
+                      get_profile_time = time.time() - get_profile_time_start
+                      ki.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                      get_profile_time_start = time.time()
+                      get_profile = cl.getProfile()
+                      get_profile_time = time.time() - get_profile_time_start
+                      kk.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                      get_profile_time_start = time.time()
+                      get_profile = cl.getProfile()
+                      get_profile_time = time.time() - get_profile_time_start
+                      kc.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                      get_profile_time_start = time.time()
+                      get_profile = cl.getProfile()
+                      get_profile_time = time.time() - get_profile_time_start
+                      ke.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                      get_profile_time_start = time.time()
+                      get_profile = cl.getProfile()
+                      get_profile_time = time.time() - get_profile_time_start
+                      ks.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                      get_profile_time_start = time.time()
+                      get_profile = cl.getProfile()
+                      get_profile_time = time.time() - get_profile_time_start
+                      kt.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                      get_profile_time_start = time.time()
+                      get_profile = cl.getProfile()
+                      get_profile_time = time.time() - get_profile_time_start
+                      k1.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                      get_profile_time_start = time.time()
+                      get_profile = cl.getProfile()
+                      get_profile_time = time.time() - get_profile_time_start
+                      k2.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
+                      get_profile_time_start = time.time()
+                      get_profile = cl.getProfile()
+                      get_profile_time = time.time() - get_profile_time_start
+                      k3.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
 #======================================================================================================#
                 elif text.lower() == 'ck':
                   if msg._from in admin or msg._from in owner:
