@@ -3586,39 +3586,39 @@ def lineBot(op):
                 elif text.lower() == 'spb':
                   if msg._from in admin:
                       get_profile_time_start = time.time()
-                      get_profile = cl.getProfile()
+                      get_profile = line.getProfile()
                       get_profile_time = time.time() - get_profile_time_start
                       ki.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
                       get_profile_time_start = time.time()
-                      get_profile = cl.getProfile()
+                      get_profile = line.getProfile()
                       get_profile_time = time.time() - get_profile_time_start
                       kk.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
                       get_profile_time_start = time.time()
-                      get_profile = cl.getProfile()
+                      get_profile = line.getProfile()
                       get_profile_time = time.time() - get_profile_time_start
                       kc.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
                       get_profile_time_start = time.time()
-                      get_profile = cl.getProfile()
+                      get_profile = line.getProfile()
                       get_profile_time = time.time() - get_profile_time_start
                       ke.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
                       get_profile_time_start = time.time()
-                      get_profile = cl.getProfile()
+                      get_profile = line.getProfile()
                       get_profile_time = time.time() - get_profile_time_start
                       ks.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
                       get_profile_time_start = time.time()
-                      get_profile = cl.getProfile()
+                      get_profile = line.getProfile()
                       get_profile_time = time.time() - get_profile_time_start
                       kt.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
                       get_profile_time_start = time.time()
-                      get_profile = cl.getProfile()
+                      get_profile = line.getProfile()
                       get_profile_time = time.time() - get_profile_time_start
                       k1.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
                       get_profile_time_start = time.time()
-                      get_profile = cl.getProfile()
+                      get_profile = line.getProfile()
                       get_profile_time = time.time() - get_profile_time_start
                       k2.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
                       get_profile_time_start = time.time()
-                      get_profile = cl.getProfile()
+                      get_profile = line.getProfile()
                       get_profile_time = time.time() - get_profile_time_start
                       k3.sendMessage(msg.to, "Speed\n%.10f ms" % (get_profile_time/3))
 #======================================================================================================#
