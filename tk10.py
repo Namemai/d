@@ -11,40 +11,40 @@ import time, random, sys, json, codecs, threading, glob, re, string, os, request
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-line = LINE("axd16254@zzrgg.com","mai06555mai")
+line = LINE("EQ2bfH7dTPUhedJxWWE8.qe9TEhVrmbQ0LYIYXdDSsa.1/qxtIZ1sDoFkaKCIBiOOALrh8bT9BrDCR4x1z3hhSg=")
 line.log("Auth Token : " + str(line.authToken))
 # Assist
-ki = LINE("mnn84815@bcaoo.com","mai06555mai")
+ki = LINE("EQofgFVxvnlx2hvDlfM6.H3Ul8HFR7rk7fS5hsDnDnG.Ch8LB1sSRrn84dCV5+cUcj9+foGr2kD3MwsLSVk6X4Y=")
 ki.log("Auth Token : " + str(ki.authToken))
 
-kk = LINE("uwc45303@zzrgg.com","mai06555mai")
+kk = LINE("EQrX9eVXCheZ7LYN7iW5.Cj+PoFGsPJ6U3lLpTHVobq.55wkEuD5BOcSLKqXNc7NOnRodR9PpXvvzFt50eIZoYo=")
 kk.log("Auth Token : " + str(kk.authToken))
 
-kc = LINE("ckz89175@bcaoo.com","mai06555mai")
+kc = LINE("EQBDbdveVgJcHpG3Ufm1.2oiMcjEit4mUOBTx5zJEeq.UGOw741aSQTYCsACQTuuklPMoF9E7nigqK82CBDdVMs=")
 kc.log("Auth Token : " + str(kc.authToken))
 
-ke = LINE("pzx60129@bcaoo.com","mai06555mai")
+ke = LINE("EQjuYDGPLRGB18tdoQTf.cDYNnqVNKIN9mb9ufgsvpW.oBxLlUFqNQXIrdGO3rW8typour1SH+oIECaRn3bxIzY=")
 ke.log("Auth Token : " + str(ke.authToken))
 
-ks = LINE("faz26918@zzrgg.com","mai06555mai")
+ks = LINE("EQAB9uFqXry1ulMPnMR5.0XJZJSSm2rBCanlf8b+H1q.exd1Ag+JavVsPLuakivulKW67Cf0AH9yVHScGKqh2HU=")
 ks.log("Auth Token : " + str(ks.authToken))
 
-kt = LINE("ovj15178@zzrgg.com","mai06555mai")
+kt = LINE("EQUyg5f264tJpu2sGv66.Cz1ZMjx6NQzlJZ6NHmCKbG.NP7gMBc3NwMkKvubihxaMaKivUUoZYnfv/lwz1siKL8=")
 kt.log("Auth Token : " + str(kt.authToken))
 
-k1 = LINE("bvu03985@eoopy.com","mai06555mai")
+k1 = LINE("EQcmxZFhIR7d4TT0X2T4.CeC3jZi51uo0g38ZqoIe1a.8hoN1mpzydcZVQ6p2Wyic8ev4K9NQLHkxrXV0VIxY9o=")
 k1.log("Auth Token : " + str(k1.authToken)) 
 
-k2 = LINE("vsz71687@eoopy.com","mai06555mai")
+k2 = LINE("EQ97Fx2htLxhkQ7nHOs4.spUm8672KnRV8OpyEW085a.qKmM+HWwf9+r+URAIAzx22z/580BU5OI6Z6buX2up4E=")
 k2.log("Auth Token : " + str(k2.authToken))
 
-k3 = LINE("hgr99109@eoopy.com","mai06555mai")
+k3 = LINE("EQaBa1bGukNGvrIpx3L1.rGrDngNSWF2KtQbPMbW5Sq.Rf9gi/mL/JH+VxpP14vLC5I5CvEdqkSwzpL69rVjdaU=")
 k3.log("Auth Token : " + str(k3.authToken))
 
-g1 = LINE("mhh87894@zzrgg.com","mai06555mai")
+g1 = LINE("EQ2gqKqtT4MbelZ2Ioud.BhBt2iou452EqQ0WX2tgxq.DqQeZnjOv6QH0AlCfPdJg8Hn/HHuQEGyAIefkYjgl2Q=")
 g1.log("Auth Token : " + str(g1.authToken))
 
-g2 = LINE("lln71685@bcaoo.com","mai06555mai")
+g2 = LINE("EQ9HhR6HtKTntZ4pSaRb.gVZ1FJwxpqAnSLxx19ew/W.I4wxPXt8saB7/Xp84sAwlmKPLShE1ZSmNcR56md3QGc=")
 g2.log("Auth Token : " + str(g2.authToken))
 
 print("---LOGIN SUCCES---")
