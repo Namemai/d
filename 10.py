@@ -119,7 +119,7 @@ oepoll = OEPoll(kk)
 oepoll = OEPoll(ki)
 oepoll = OEPoll(line)
 
-KAC = [ki,kk,kc,ke,kt,ks,k1,k2,k3,k4,g1,g2]
+KAC = [line,ki,kk,kc,ke,kt,ks,k1,k2,k3,k4,g1,g2]
 lineMID = line.getProfile().mid
 kiMID = ki.getProfile().mid
 kkMID = kk.getProfile().mid
