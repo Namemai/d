@@ -11,7 +11,7 @@ import time, random, sys, json, codecs, threading, glob, re, string, os, request
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-line = LINE("06555mai@gmail.com","mai06555mai")
+line = LINE("axd16254@zzrgg.com","mai06555mai")
 line.log("Auth Token : " + str(line.authToken))
 # Assist
 ki = LINE("mnn84815@bcaoo.com","mai06555mai")
@@ -47,8 +47,6 @@ k4.log("Auth Token : " + str(k4.authToken))
 g1 = LINE("lln71685@bcaoo.com","mai06555mai")
 g1.log("Auth Token : " + str(g1.authToken))
 
-g2 = LINE("axd16254@zzrgg.com","mai06555mai")
-g2.log("Auth Token : " + str(g2.authToken))
 
 print("---LOGIN SUCCES---")
 #==============================================================================#
@@ -101,11 +99,7 @@ g1MID = g1.profile.mid
 g1Profile = g1.getProfile()
 g1Settings = g1.getSettings()
 
-g2MID = g2.profile.mid
-g2Profile = g2.getProfile()
-g2Settings = g2.getSettings()
 
-oepoll = OEPoll(g2)
 oepoll = OEPoll(g1)
 oepoll = OEPoll(k4)
 oepoll = OEPoll(k3)
@@ -119,7 +113,7 @@ oepoll = OEPoll(kk)
 oepoll = OEPoll(ki)
 oepoll = OEPoll(line)
 
-KAC = [line,ki,kk,kc,ke,kt,ks,k1,k2,k3,k4,g1,g2]
+KAC = [line,ki,kk,kc,ke,kt,ks,k1,k2,k3,k4,g1]
 lineMID = line.getProfile().mid
 kiMID = ki.getProfile().mid
 kkMID = kk.getProfile().mid
@@ -132,9 +126,8 @@ k2MID = k2.getProfile().mid
 k3MID = k3.getProfile().mid
 k4MID = k4.getProfile().mid
 g1MID = g1.getProfile().mid
-g2MID = g2.getProfile().mid
 
-Bots=[lineMID,kiMID,kkMID,kcMID,keMID,ktMID,ksMID,k1MID,k2MID,k3MID,k4MID,g1MID,g2MID]
+Bots=[lineMID,kiMID,kkMID,kcMID,keMID,ktMID,ksMID,k1MID,k2MID,k3MID,k4MID,g1MID]
 creator = ["uc66e45201d1612eb4ce7b3a86bac4685"]
 admin=['uc66e45201d1612eb4ce7b3a86bac4685']
 owner=['uc66e45201d1612eb4ce7b3a86bac4685']
