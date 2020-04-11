@@ -1045,9 +1045,7 @@ def lineBot(op):
                         invsend = 0
                         Ticket = line.reissueGroupTicket(op.param1)
                         g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         g1.kickoutFromGroup(op.param1,[op.param2])
-                        g2.kickoutFromGroup(op.param1,[op.param2])
                         X = line.getGroup(op.param1)
                         X.preventedJoinByTicket = True
                         line.updateGroup(X)
@@ -1060,9 +1058,7 @@ def lineBot(op):
                             invsend = 0
                             Ticket = ki.reissueGroupTicket(op.param1)
                             g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                            g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                             g1.kickoutFromGroup(op.param1,[op.param2])
-                            g2.kickoutFromGroup(op.param1,[op.param2])
                             X = ki.getGroup(op.param1)
                             X.preventedJoinByTicket = True
                             ki.updateGroup(X)
@@ -1075,39 +1071,34 @@ def lineBot(op):
                     if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                         try:
                             g1.acceptGroupInvitation(op.param1)
-                            g2.acceptGroupInvitation(op.param1)            
-                            g2.inviteIntoGroup(op.param1,[lineMID])
                             g1.inviteIntoGroup(op.param1,[lineMID])
                             g1.kickoutFromGroup(op.param1,[op.param2])
-                            g2.kickoutFromGroup(op.param1,[op.param2])
                             line.acceptGroupInvitation(op.param1)
                             settings["blacklist"][op.param2] = True
                             g1.leaveGroup(op.param1)
-                            g2.leaveGroup(op.param1)
-                            line.inviteIntoGroup(op.param1,[g1MID,g2MID])
+                            line.inviteIntoGroup(op.param1,[g1MID])
                         except:
                             pass
             if op.param3 in g1MID:
                     if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                         line.kickoutFromGroup(op.param1,[op.param2])
                         line.findAndAddContactsByMid(op.param3)
-                        line.inviteIntoGroup(op.param1,[g1MID,g2MID])
+                        line.inviteIntoGroup(op.param1,[g1MID])
                     else:
                         line.kickoutFromGroup(op.param1,[op.param2])
                         line.findAndAddContactsByMid(op.param3)
-                        line.inviteIntoGroup(op.param1,[g1MID,g2MID])
+                        line.inviteIntoGroup(op.param1,[g1MID])
 
             if op.param1 in protectantijs:
                 if g2MID in op.param3:
                     if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                         settings["blacklist"][op.param2] = True
                         try:
-                            g1.inviteIntoGroup(op.param1,[g2MID])
+                            g1.inviteIntoGroup(op.param1,[lineMID])
                             g1.kickoutFromGroup(op.param1,[op.param2])
                         except:
                             try:
-                                g2.inviteIntoGroup(op.param1,[g1MID])
-                                g2.kickoutFromGroup(op.param1,[op.param2])
+                                line.inviteIntoGroup(op.param1,[g1MID])
                             except:
                                 pass
 #======================================================================================================#                    
@@ -1171,19 +1162,13 @@ def lineBot(op):
                     try:
                         g1.acceptGroupInvitation(op.param1)
                         g1.findAndAddContactsByMid(op.param3)
-                        g2.acceptGroupInvitation(op.param1)
-                        g2.findAndAddContactsByMid(op.param3)
                         g1.inviteIntoGroup(op.param1,[op.param3])
-                        g2.inviteIntoGroup(op.param1,[op.param3])
                         line.acceptGroupInvitation(op.param1)
                         x = g1.getGroup(op.param1)
-                        x = g2.getGroup(op.param1)
                         x.preventedJoinByTicket = False
                         g1.updateGroup(x)
-                        g2.updateGroup(x)
                         invsend = 0
                         Ti = g1.reissueGroupTicket(op.param1)
-                        Ti = g2.reissueGroupTicket(op.param1)
                         line.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         kk.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1197,11 +1182,10 @@ def lineBot(op):
                         k4.acceptGroupInvitationByTicket(op.param1,Ticket)
                         settings["blacklist"][op.param2] = True
                         Ticket = g1.reissueGroupTicket(op.param1)
-                        Ticket = g2.reissueGroupTicket(op.param1)
-                        random.choice(KAC).inviteIntoGroup(op.param1,[g1MID,g2MID])
+                        random.choice(KAC).inviteIntoGroup(op.param1,[g1MID])
                     except:
                         random.choice(KAC).findAndAddContactsByMid(op.param3)
-                        random.choice(KAC).inviteIntoGroup(op.param1,[g1MID,g2MID])
+                        random.choice(KAC).inviteIntoGroup(op.param1,[g1MID])
 
                 return 
         if op.type == 19:
@@ -1894,7 +1878,6 @@ def lineBot(op):
                                                             invsend = 0
                                                             Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
                                                             g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             line.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kk.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -1992,7 +1975,6 @@ def lineBot(op):
                                                             invsend = 0
                                                             Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
                                                             g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             line.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kk.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -2091,7 +2073,6 @@ def lineBot(op):
                                                             invsend = 0
                                                             Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
                                                             g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             line.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kk.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -2203,7 +2184,6 @@ def lineBot(op):
                                                                     invsend = 0
                                                                     Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
                                                                     g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                                    g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                                     line.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                                     ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                                     kk.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -2302,7 +2282,6 @@ def lineBot(op):
                                                             invsend = 0
                                                             Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
                                                             g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             line.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kk.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -2407,7 +2386,6 @@ def lineBot(op):
                                                             invsend = 0
                                                             Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
                                                             g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             line.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kk.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -2514,7 +2492,6 @@ def lineBot(op):
                                                             invsend = 0
                                                             Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
                                                             g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             line.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kk.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -2620,7 +2597,6 @@ def lineBot(op):
                                                             invsend = 0
                                                             Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
                                                             g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             line.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kk.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -2726,7 +2702,6 @@ def lineBot(op):
                                                             invsend = 0
                                                             Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
                                                             g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             line.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kk.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -2832,7 +2807,6 @@ def lineBot(op):
                                                             invsend = 0
                                                             Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
                                                             g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             line.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kk.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -2938,7 +2912,6 @@ def lineBot(op):
                                                             invsend = 0
                                                             Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
                                                             g1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                                                            g2.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             line.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kk.acceptGroupInvitationByTicket(op.param1,Ticket)
