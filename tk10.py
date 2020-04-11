@@ -3111,7 +3111,7 @@ def lineBot(op):
                 elif text.lower() == 'มี':
                   if msg._from in admin:
                      msg.contentType = 13
-                     msg.contentMetadata = {'mid': mid}
+                     msg.contentMetadata = {'lineMID': lineMID}
                      line.sendMessage1(msg)
                 elif text.lower() == 'sp':
                   if msg._from in admin:
@@ -3340,6 +3340,7 @@ def lineBot(op):
                                 k2.removeAllMessages(op.param2)
                                 k3.removeAllMessages(op.param2)
                                 k4.removeAllMessages(op.param2)
+                                line.removeAllMessages(op.param2)
                                 line.sendMessage(msg.to,"Done")
                             except:
                                 pass
@@ -3362,7 +3363,6 @@ def lineBot(op):
                 elif text.lower() == "g out":
                     if msg._from in admin:
                         g1.leaveGroup(msg.to)
-                        g2.leaveGroup(msg.to)
                                         
                 elif text.lower() == "ออก":
                     if msg._from in admin:
@@ -3378,6 +3378,7 @@ def lineBot(op):
                             k2.leaveGroup(i) 
                             k3.leaveGroup(i) 
                             k4.leaveGroup(i)
+                            line.leaveGroup(i)
                             print ("Kicker Leave All group") 
 
                 elif text.lower() == "iv":
@@ -3406,7 +3407,7 @@ def lineBot(op):
                           a = a + 1
                           end = '\n'
                           ma += str(a) + ". " +line.getContact(m_id).displayName + "\n"
-                      line.sendMessage(msg.to," MAI \n"+ma+"\nTotal「%s」" %(str(len(Bots))))
+                      line.sendMessage(msg.to," MAI \n"+ma+"\nbot「%s」" %(str(len(Bots))))
 
                 elif text.lower() == "set2":
                   if msg._from in admin:
@@ -3452,16 +3453,16 @@ def lineBot(op):
 
                 elif text.lower() == "bb":
                   if msg._from in admin:
-                      ki.sendText(msg.to,"OK")
-                      kk.sendText(msg.to,"OK")
-                      kc.sendText(msg.to,"OK")
-                      ke.sendText(msg.to,"OK")
-                      ks.sendText(msg.to,"OK")
-                      kt.sendText(msg.to,"OK")
-                      k1.sendText(msg.to,"OK")
-                      k2.sendText(msg.to,"OK")
-                      k3.sendText(msg.to,"OK")
-                      k4.sendText(msg.to,"OK")
+                      ki.sendText(msg.to,"1..OK")
+                      kk.sendText(msg.to,"2..OK")
+                      kc.sendText(msg.to,"3..OK")
+                      ke.sendText(msg.to,"4..OK")
+                      ks.sendText(msg.to,"5..OK")
+                      kt.sendText(msg.to,"6..OK")
+                      k1.sendText(msg.to,"7..OK")
+                      k2.sendText(msg.to,"8..OK")
+                      k3.sendText(msg.to,"9..OK")
+                      k4.sendText(msg.to,"10..OK")
                       
                 elif text.lower() == "เปิดลิ้ง":
                   if msg._from in admin:
@@ -3607,8 +3608,8 @@ def lineBot(op):
                                  msgs = "Protect invite sudah tidak aktif"
                             line.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
                             
-                elif 'G ' in msg.text:
-                      spl = msg.text.replace('G ','')
+                elif 'g ' in msg.text:
+                      spl = msg.text.replace('g ','')
                       if spl == 'on':
                           if msg.to in ghost:
                                msgs = "ghost sudah aktif"
@@ -3723,20 +3724,53 @@ def lineBot(op):
    
                 elif text.lower() == 'bc':
                   if msg._from in admin:
-                    if wait["blacklist"] == {}:
-                          line.sendMessage(msg.to,"blacklist")
+                    if settings["blacklist"] == {}:
+                        line.sendMessage(msg.to,"Tidak ada blacklist")
+                        ki.sendMessage(msg.to,"Tidak ada blacklist")
+                        kk.sendMessage(msg.to,"Tidak ada blacklist")
+                        kc.sendMessage(msg.to,"Tidak ada blacklist")
+                        ke.sendMessage(msg.to,"Tidak ada blacklist")
+                        kt.sendMessage(msg.to,"Tidak ada blacklist")
+                        ks.sendMessage(msg.to,"Tidak ada blacklist")
+                        k1.sendMessage(msg.to,"Tidak ada blacklist")
+                        k2.sendMessage(msg.to,"Tidak ada blacklist")
+                        k3.sendMessage(msg.to,"Tidak ada blacklist")
+                        k4.sendMessage(msg.to,"Tidak ada blacklist")
                     else:
-                          ma = ""
-                          for i in wait["blacklist"]:
-                              ma = line.getContact(i)
-                              line.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
-                      
+                      ma = ""
+                      a = 0
+                      for m_id in settings["blacklist"]:
+                          a = a + 1
+                          end = '\n'
+                          ma += str(a) + ". " +line.getContact(m_id).displayName + "\n"
+                      line.sendMessage(msg.to,"Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(settings["blacklist"]))))
+                      ki.sendMessage(msg.to,"Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(settings["blacklist"]))))
+                      kk.sendMessage(msg.to,"Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(settings["blacklist"]))))
+                      kc.sendMessage(msg.to,"Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(settings["blacklist"]))))
+                      ke.sendMessage(msg.to,"Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(settings["blacklist"]))))
+                      kt.sendMessage(msg.to,"Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(settings["blacklist"]))))
+                      ks.sendMessage(msg.to,"Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(settings["blacklist"]))))
+                      k1.sendMessage(msg.to,"Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(settings["blacklist"]))))
+                      k2.sendMessage(msg.to,"Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(settings["blacklist"]))))
+                      k3.sendMessage(msg.to,"Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(settings["blacklist"]))))
+                      k4.sendMessage(msg.to,"Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(settings["blacklist"]))))
+
                 elif text.lower() == 'cb':
                   if msg._from in admin:
                     settings["blacklist"] = {}
                     ragets = line.getContacts(settings["blacklist"])
                     mc = "「%i」User Blacklist" % len(ragets)
-                    line.sendMessage(msg.to,"ล้างดำแล้ว.. " +mc)
+                    line.sendMessage(msg.to,"Sukses membersihkan " +mc)
+                    ki.sendMessage(msg.to,"Sukses membersihkan " +mc)
+                    kk.sendMessage(msg.to,"Sukses membersihkan " +mc)
+                    kc.sendMessage(msg.to,"Sukses membersihkan " +mc)
+                    ke.sendMessage(msg.to,"Sukses membersihkan " +mc)
+                    kt.sendMessage(msg.to,"Sukses membersihkan " +mc)
+                    ks.sendMessage(msg.to,"Sukses membersihkan " +mc)
+                    k1.sendMessage(msg.to,"Sukses membersihkan " +mc)
+                    k2.sendMessage(msg.to,"Sukses membersihkan " +mc)
+                    k3.sendMessage(msg.to,"Sukses membersihkan " +mc)
+                    k4.sendMessage(msg.to,"Sukses membersihkan " +mc)
                               
                 elif text.lower() == 'bye':
                   if msg._from in admin:
@@ -3889,6 +3923,7 @@ def lineBot(op):
                 settings["blacklist"][op.param2] = True
         if op.type == 22:
             if settings['leaveRoom'] == True:
+                line.leaveRoom(op.param1)
                 ki.leaveRoom(op.param1)
                 kk.leaveRoom(op.param1)
                 kc.leaveRoom(op.param1)
@@ -3902,6 +3937,7 @@ def lineBot(op):
                 
         if op.type == 24:
             if settings['leaveRoom'] == True:
+                line.leaveRoom(op.param1)
                 ki.leaveRoom(op.param1)
                 kk.leaveRoom(op.param1)
                 kc.leaveRoom(op.param1)
@@ -3959,6 +3995,8 @@ def lineBot(op):
                                 k2.acceptGroupInvitationByTicket(ra.id,ticket_id)
                                 group = k3.findGroupByTicket(ticket_id)
                                 k3.acceptGroupInvitationByTicket(ra.id,ticket_id)
+                                group = k4.findGroupByTicket(ticket_id)
+                                k4.acceptGroupInvitationByTicket(ra.id,ticket_id)
                                 line.sendMessage(to, "ดีคับ %s" % str(group.name))
                             else:
                                 pass
